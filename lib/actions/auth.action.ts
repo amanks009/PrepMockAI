@@ -57,6 +57,9 @@ export async function signIn(params: SignInParams) {
         }
 
         await setSessionCookie(idToken);
+        return {
+            success: true
+        };
     } catch (e) {
         console.log(e);
 

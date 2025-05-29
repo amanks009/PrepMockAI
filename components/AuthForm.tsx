@@ -51,6 +51,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 })
 
                 if(!result?.success) {
+                    // console.log("error here")
                     toast.error(result?.message);
                     return;
                 }
@@ -74,6 +75,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
                 })
 
                 toast.success('Sign in successfully.');
+                console.log("getting here")
                 router.push('/')
             }
         } catch (error) {
